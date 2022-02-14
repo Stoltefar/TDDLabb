@@ -64,5 +64,11 @@ class EmployeeTest {
     @Test
     public void checkSetSalary() {
         employeeObject.setSalary(1.41);
+        double actual = employeeObject.getSalary();
+        double expected = 1.41;
+
+        assertEquals(expected, actual);
+
+
     }
 }
