@@ -12,6 +12,24 @@ class EmployeeTest {
     }
 
     @Test
+    @Order(1)
+    public void checkIdVariable() {
+        int actual = employeeObject.getId();
+        int expected = 1;
+
+        assertEquals(expected, actual);
+    }
+    //TODO Create test for unique ID values.
+
+    @Test
+    @Order(2)
+    public void checkAutoIncrementOnId() {
+        int expected = 2;
+        int actual = employeeObject.getId();
+
+        assertEquals(expected, actual);
+    }
+    @Test
     public void createEmployee() {
         //employeeObject = new Employee(); Removed when creating constructor.
         assertInstanceOf(Employee.class, employeeObject);
@@ -40,26 +58,6 @@ class EmployeeTest {
         int actual = employeeObject.getAge();
 
         //Assert
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    @Order(1)
-    public void checkIdVariable() {
-        int actual = employeeObject.getId();
-        int expected = 1;
-
-        assertEquals(expected, actual);
-    }
-    //TODO Create test for unique ID values.
-    // Check auto-increment on id.
-
-    @Test
-    @Order(2)
-    public void checkAutoIncrementOnId() {
-        int expected = 2;
-        int actual = employeeObject.getId();
-
         assertEquals(expected, actual);
     }
 
