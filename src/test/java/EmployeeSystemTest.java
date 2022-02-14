@@ -16,4 +16,9 @@ public class EmployeeSystemTest {
 
         assertInstanceOf(EmployeeSystem.class,testSystem);
     }
+
+    @Test
+    public void initializeArrayList() {
+        employeeSystemObject.employeeList.getName();
+    }
 }
