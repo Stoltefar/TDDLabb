@@ -18,4 +18,7 @@ public class Employee {
     public int getAge() {
         return age;
     }
+
+    public void getId() {
+    }
 }
