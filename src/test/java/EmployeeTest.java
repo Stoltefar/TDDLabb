@@ -1,8 +1,7 @@
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class EmployeeTest {
 
     Employee employeeObject;
@@ -45,6 +44,7 @@ class EmployeeTest {
     }
 
     @Test
+    @Order(1)
     public void checkIdVariable() {
         int actual = employeeObject.getId();
         int expected = 1;
@@ -53,11 +53,12 @@ class EmployeeTest {
     }
     //TODO Create test for unique ID values.
     // Check auto-increment on id.
+
     @Test
+    @Order(2)
     public void checkAutoIncrementOnId() {
-        Employee object2 = new Employee("SecondEmployee", 55, 10000);
         int expected = 2;
-        int actual = object2.getId();
+        int actual = employeeObject.getId();
 
         assertEquals(expected, actual);
     }

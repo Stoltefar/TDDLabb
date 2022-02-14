@@ -3,7 +3,7 @@ public class Employee {
     private String name;
     private int age;
     private int id;
-    private int idCounter =0;
+    private static int idCounter =0;
     private double salary;
 
 
@@ -12,6 +12,7 @@ public class Employee {
         this.age = age;
         this.id = idCounter + 1;
         this.salary = salary;
+        ++idCounter;
     }
 
     public void setName(String name) {
