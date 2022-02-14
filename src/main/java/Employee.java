@@ -8,4 +8,7 @@ public class Employee {
     public String getName() {
         return name;
     }
+
+    public void setAge(int i) {
+    }
 }
