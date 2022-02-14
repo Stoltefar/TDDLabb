@@ -33,4 +33,8 @@ public class Employee {
     public int getId() {
         return id;
     }
+
+    public double getSalary() {
+        return salary;
+    }
 }
