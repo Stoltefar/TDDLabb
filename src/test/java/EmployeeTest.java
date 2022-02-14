@@ -27,6 +27,9 @@ class EmployeeTest {
         employeeObject.setName("Adam");
         String actual = employeeObject.getName();
 
+        // Assert
+        assertEquals(expected, actual);
+
 
     }
 
