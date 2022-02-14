@@ -53,6 +53,14 @@ class EmployeeTest {
     }
     //TODO Create test for unique ID values.
     // Check auto-increment on id.
+    @Test
+    public void checkAutoIncrementOnId() {
+        Employee object2 = new Employee("SecondEmployee", 55, 10000);
+        int expected = 2;
+        int actual = object2.getId();
+
+        assertEquals(expected, actual);
+    }
 
     @Test
     public void checkSalaryVariable() {
