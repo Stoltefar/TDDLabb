@@ -43,4 +43,11 @@ class EmployeeTest {
         //Assert
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void checkIdVariable() {
+        employeeObject.getId();
+    }
+    //TODO Create test for unique ID values.
+
 }
