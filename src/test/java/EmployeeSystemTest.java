@@ -18,12 +18,11 @@ public class EmployeeSystemTest {
 
         assertInstanceOf(EmployeeSystem.class,testSystem);
     }
-    //TODO
-    /* Vi insåg att det här testet var för stort. Börjar på ett annat ställe.
+
     @Test
-    public void initializeArrayList() {
-        employeeSystemObject.employeeList.getName();
-    } */
+    public void addEmployeeToEmployeeList() {
+        employeeSystemObject.employeeList.add(Employee newObject = new Employee("Adam Ant", 1, 100));
+    }
 
 
 
