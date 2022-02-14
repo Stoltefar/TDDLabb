@@ -9,12 +9,12 @@ class EmployeeTest {
 
     @BeforeEach
     public void setUpEmployee() {
-        employeeObject = new Employee();
+        employeeObject = new Employee("StartName", 42, 3.14);
     }
 
     @Test
     public void createEmployee() {
-        employeeObject = new Employee();
+        //employeeObject = new Employee(); Removed when creating constructor.
         assertInstanceOf(Employee.class, employeeObject);
     }
 
