@@ -21,7 +21,13 @@ class EmployeeTest {
     @Test
     public void checkNameVariable() {
         //Arrange
+        String expected = "Adam";
+
+        // Act
         employeeObject.setName("Adam");
+        String actual = employeeObject.getName();
+
+
     }
 
 
