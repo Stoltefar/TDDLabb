@@ -15,7 +15,7 @@ class EmployeeTest {
     @Test
     public void createEmployee() {
         employeeObject = new Employee();
-        assertInstanceOf(Employee.class,employeeObject);
+        assertInstanceOf(Employee.class, employeeObject);
     }
 
     @Test
@@ -29,9 +29,14 @@ class EmployeeTest {
 
         // Assert
         assertEquals(expected, actual);
-
-
     }
 
+    @Test
+    public void checkAgeVariable() {
+        //Arrange
+        int expected = 42;
 
+        //Act
+        employeeObject.setAge(42);
+    }
 }
