@@ -11,6 +11,7 @@ public class Employee {
     }
 
     public void setAge(int i) {
+        this.age = i;
     }
 
     public int getAge() {
