@@ -39,5 +39,8 @@ class EmployeeTest {
         //Act
         employeeObject.setAge(42);
         int actual = employeeObject.getAge();
+
+        //Assert
+        assertEquals(expected, actual);
     }
 }
