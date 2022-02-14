@@ -2,6 +2,7 @@ public class Employee {
 
     private String name;
     private int age;
+    private int id;
 
     public void setName(String name) {
         this.name = name;
@@ -19,6 +20,7 @@ public class Employee {
         return age;
     }
 
-    public void getId() {
+    public int getId() {
+        return id;
     }
 }
