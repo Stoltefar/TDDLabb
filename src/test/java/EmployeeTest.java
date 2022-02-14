@@ -47,6 +47,9 @@ class EmployeeTest {
     @Test
     public void checkIdVariable() {
         int actual = employeeObject.getId();
+        int expected = 1;
+
+        assertEquals(expected, actual);
     }
     //TODO Create test for unique ID values.
 
