@@ -53,4 +53,11 @@ class EmployeeTest {
     }
     //TODO Create test for unique ID values.
 
+    @Test
+    public void checkSalaryVariable() {
+        double expected = 3.15;
+        double actual = employeeObject.getSalary();
+
+    }
+
 }
