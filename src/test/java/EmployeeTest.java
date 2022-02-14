@@ -59,7 +59,10 @@ class EmployeeTest {
         double actual = employeeObject.getSalary();
 
         assertEquals(expected, actual);
-
     }
 
+    @Test
+    public void checkSetSalary() {
+        employeeObject.setSalary(1.41);
+    }
 }

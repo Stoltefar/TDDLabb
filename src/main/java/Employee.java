@@ -37,4 +37,7 @@ public class Employee {
     public double getSalary() {
         return salary;
     }
+
+    public void setSalary(double salary) {
+    }
 }
