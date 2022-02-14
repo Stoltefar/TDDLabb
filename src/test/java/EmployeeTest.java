@@ -46,7 +46,7 @@ class EmployeeTest {
 
     @Test
     public void checkIdVariable() {
-        employeeObject.getId();
+        int actual = employeeObject.getId();
     }
     //TODO Create test for unique ID values.
 
