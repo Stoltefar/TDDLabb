@@ -2,6 +2,7 @@ public class Employee {
 
     private String name;
     private int age;
+
     public void setName(String name) {
         this.name = name;
     }
@@ -10,8 +11,8 @@ public class Employee {
         return name;
     }
 
-    public void setAge(int i) {
-        this.age = i;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public int getAge() {
