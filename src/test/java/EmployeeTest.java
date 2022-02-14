@@ -52,6 +52,7 @@ class EmployeeTest {
         assertEquals(expected, actual);
     }
     //TODO Create test for unique ID values.
+    // Check auto-increment on id.
 
     @Test
     public void checkSalaryVariable() {
@@ -63,12 +64,14 @@ class EmployeeTest {
 
     @Test
     public void checkSetSalary() {
+        // Arrange
         employeeObject.setSalary(1.41);
-        double actual = employeeObject.getSalary();
         double expected = 1.41;
 
+        // Act
+        double actual = employeeObject.getSalary();
+
+        //Assert
         assertEquals(expected, actual);
-
-
     }
 }
