@@ -4,9 +4,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class EmployeeSystemTest {
 
+    EmployeeSystem employeeSystemObject;
+
     @BeforeEach
     public void setUpEmployeeSystem() {
-        EmployeeSystem employeeSystemObject;
+
         employeeSystemObject = new EmployeeSystem();
     }
     @Test
