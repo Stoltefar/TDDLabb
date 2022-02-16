@@ -48,6 +48,22 @@ public class EmployeeSystemTest {
         assertFalse(idIsNotUnique);
     }
 
+    @Test
+    public void checkRemoveEmployee() {
+        for(int i = 0; i<10;i++) {
+            Employee newEmployee = new Employee("Adam Ant",i, 100);
+            employeeSystemObject.addNewEmployee(newEmployee);
+        }
 
+        employeeSystemObject.removeEmployee(5);
+        boolean iDFiveExists = false;
+        for(int i = 0; i<employeeSystemObject.employeeList.size();i++) {
+            if(employeeSystemObject.employeeList.get(i).getId() == 5) {
+                iDFiveExists = true;
+                break;
+            }
+        }
+        assertFalse(iDFiveExists);
+    }
 
 }
