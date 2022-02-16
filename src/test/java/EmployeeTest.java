@@ -19,7 +19,6 @@ class EmployeeTest {
 
         assertEquals(expected, actual);
     }
-    //TODO Create test for unique ID values.
 
     @Test
     @Order(2)
