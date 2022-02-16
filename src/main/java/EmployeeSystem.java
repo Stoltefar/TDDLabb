@@ -9,10 +9,10 @@ public class EmployeeSystem {
         employeeList.add(newEmployee);
     }
 
-    public void removeEmployee(int i) {
-        for(int j = 0; j < employeeList.size();j++) {
-            if(employeeList.get(j).getId() == i) {
-                employeeList.remove(j);
+    public void removeEmployee(int id) {
+        for(int i = 0; i < employeeList.size();i++) {
+            if(employeeList.get(i).getId() == id) {
+                employeeList.remove(i);
                 break;
             }
         }
