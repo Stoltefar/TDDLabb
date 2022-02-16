@@ -28,5 +28,25 @@ public class EmployeeSystemTest {
 
         assertEquals(expected, actual);
     }
+    @Test
+    public void checkUniqueEmployeeId() {
+        for(int i = 0; i<10;i++) {
+            Employee newEmployee = new Employee("Adam Ant",i, 100);
+            employeeSystemObject.addNewEmployee(newEmployee);
+        }
+
+        boolean idIsNotUnique = false;
+        for (int i = 0; i < employeeSystemObject.employeeList.size() - 1; i++) {
+            int checkId = employeeSystemObject.employeeList.get(i).getId();
+            for (int j = i + 1; j < employeeSystemObject.employeeList.size(); j++) {
+                if (checkId == employeeSystemObject.employeeList.get(j).getId()) {
+                    idIsNotUnique = true;
+                    break;
+                }
+            }
+        }
+
+        assertFalse(idIsNotUnique);
+    }
 
 }
