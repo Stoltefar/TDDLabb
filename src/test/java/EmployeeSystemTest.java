@@ -12,7 +12,7 @@ public class EmployeeSystemTest {
         employeeSystemObject = new EmployeeSystem();
     }
     @Test
-    public void createEmployeeSystem() {
+    public void checkCreateEmployeeSystem() {
         EmployeeSystem testSystem;
         testSystem = new EmployeeSystem();
 
@@ -20,7 +20,7 @@ public class EmployeeSystemTest {
     }
 
     @Test
-    public void addEmployeeToEmployeeList() {
+    public void checkAddEmployeeToEmployeeList() {
         Employee newEmployee = new Employee("Adam Ant", 1, 100);
         employeeSystemObject.addNewEmployee(newEmployee);
         String expected = "Name: Adam Ant, Age: 1, Salary: 100.0, ID: 1";
@@ -45,8 +45,9 @@ public class EmployeeSystemTest {
                 }
             }
         }
-
         assertFalse(idIsNotUnique);
     }
+
+
 
 }
