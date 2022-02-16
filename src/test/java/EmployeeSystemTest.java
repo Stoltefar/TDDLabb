@@ -21,11 +21,12 @@ public class EmployeeSystemTest {
 
     @Test
     public void addEmployeeToEmployeeList() {
-        Employee newObject;
-        employeeSystemObject.employeeList.add(newObject = new Employee("Adam Ant", 1, 100));
+        Employee newEmployee = new Employee("Adam Ant", 1, 100);
+        employeeSystemObject.addNewEmployee(newEmployee);
         String expected = "Name: Adam Ant, Age: 1, Salary: 100.0, ID: 1";
         String actual = employeeSystemObject.employeeList.get(0).toString();
 
         assertEquals(expected, actual);
     }
+
 }
