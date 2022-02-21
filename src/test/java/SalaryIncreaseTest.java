@@ -87,12 +87,15 @@ public class SalaryIncreaseTest {
 
     @Test
     public void checkThatOnlyOneIsRaised() {
-        for (int i=0; i<testSystem.employeeList.size();++i) {
+        // Arrange, Set all salaries to 10000.
+        for (int i = 0; i < testSystem.employeeList.size(); ++i) {
             testSystem.employeeList.get(i).setSalary(10000);
         }
         boolean isNotChanged = true;
+        // Act, raise salary on index 6.
         testSystem.employeeList.get(6).raiseSalary(5);
-        for (int i=0; i<testSystem.employeeList.size(); ++i) {
+        // Assert that salary is still 10000 except on index 6.
+        for (int i = 0; i < testSystem.employeeList.size(); ++i) {
             if (i != 6) {
                 if (testSystem.employeeList.get(i).getSalary() != 10000) {
                     isNotChanged = false;
