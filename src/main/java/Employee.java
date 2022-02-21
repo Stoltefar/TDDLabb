@@ -47,4 +47,7 @@ public class Employee {
     public String toString() {
         return "Name: " + name + ", Age: " + age + ", Salary: " + salary + ", ID: " + id;
     }
+
+    public void raiseSalary(double v) {
+    }
 }
