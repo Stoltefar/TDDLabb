@@ -9,8 +9,8 @@ public class SalaryIncreaseTest {
     @BeforeEach
     public void setupSystemWithEmployees() {
         testSystem = new EmployeeSystem();
-        for (int i = 20000; i<24000; i = i + 300) {
-            Employee newEmployee = new Employee("Inge Deg",i/1000, i);
+        for (int i = 20000; i < 24000; i = i + 300) {
+            Employee newEmployee = new Employee("Inge Deg", i / 1000, i);
             testSystem.addNewEmployee(newEmployee);
         }
     }
@@ -23,4 +23,8 @@ public class SalaryIncreaseTest {
         double actual = testSystem.employeeList.get(0).getSalary();
         assertEquals(expected, actual);
     }
+
+    //TODO
+    // Create parameterized test to assert that the raise is universal.
+
 }

@@ -10,18 +10,18 @@ public class EmployeeSystem {
     }
 
     public void removeEmployee(int id) {
-        for(int i = 0; i < employeeList.size();i++) {
-            if(employeeList.get(i).getId() == id) {
+        for (int i = 0; i < employeeList.size(); i++) {
+            if (employeeList.get(i).getId() == id) {
                 employeeList.remove(i);
                 break;
             }
         }
     }
 
-    public void universalRaise(double v) {
-        double factor = 1 + (v/100);
-        for (int i=0; i<employeeList.size(); ++i) {
-            employeeList.get(i).setSalary(factor * employeeList.get(i).getSalary());
+    public void universalRaise(double raisePercentage) {
+        double raiseFactor = 1 + (raisePercentage / 100);
+        for (int i = 0; i < employeeList.size(); ++i) {
+            employeeList.get(i).setSalary(raiseFactor * employeeList.get(i).getSalary());
         }
     }
 }
