@@ -17,4 +17,7 @@ public class EmployeeSystem {
             }
         }
     }
+
+    public void universalRaise(double v) {
+    }
 }
