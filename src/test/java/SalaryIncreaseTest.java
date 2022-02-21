@@ -66,6 +66,15 @@ public class SalaryIncreaseTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void checkIndividualNegativeRaise() {
+        double expected = 20000;
+        testSystem.employeeList.get(0).raiseSalary(-5);
+        double actual = testSystem.employeeList.get(0).getSalary();
+
+        assertEquals(expected, actual);
+    }
+
 }
 
 
