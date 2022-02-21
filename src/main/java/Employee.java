@@ -49,5 +49,6 @@ public class Employee {
     }
 
     public void raiseSalary(double v) {
+        this.salary = salary * (1+(v/100));
     }
 }
