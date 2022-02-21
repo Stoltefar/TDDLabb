@@ -26,8 +26,6 @@ public class SalaryIncreaseTest {
         assertEquals(expected, actual);
     }
 
-    //TODO
-    // Create parameterized test to assert that the raise is universal.
 
     @ParameterizedTest
     @CsvSource({
