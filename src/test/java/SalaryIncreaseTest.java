@@ -93,8 +93,10 @@ public class SalaryIncreaseTest {
         boolean isNotChanged = true;
         testSystem.employeeList.get(6).raiseSalary(5);
         for (int i=0; i<testSystem.employeeList.size(); ++i) {
-            if (testSystem.employeeList.get(i).getSalary() != 10000) {
-                isNotChanged = false;
+            if (i != 6) {
+                if (testSystem.employeeList.get(i).getSalary() != 10000) {
+                    isNotChanged = false;
+                }
             }
         }
         assertTrue(isNotChanged);
