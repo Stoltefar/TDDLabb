@@ -49,7 +49,7 @@ public class Employee {
     }
 
     public void raiseSalary(double raisePercentage) {
-        if (raisePercentage >= 0) {
+        if (raisePercentage >= 0 && raisePercentage<=100) {
             this.salary = salary * (1 + (raisePercentage / 100));
         }
     }
