@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -26,5 +28,18 @@ public class SalaryIncreaseTest {
 
     //TODO
     // Create parameterized test to assert that the raise is universal.
+
+    @ParameterizedTest
+    @CsvSource({
+            "0, 20440.0",
+            "2, 21053,2",
+            "4, 21666,4",
+            "10, 23506.0"
+    })
+    public void checkUniversalRaiseWithCsvValues(int employeeListIndex, double expectedSalary) {
+        testSystem.universalRaise(2.2);
+        double actual = testSystem.employeeList.get(employeeListIndex).getSalary();
+        assertEquals(expectedSalary, actual);
+    }
 
 }
