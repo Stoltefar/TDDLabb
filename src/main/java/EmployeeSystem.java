@@ -19,5 +19,9 @@ public class EmployeeSystem {
     }
 
     public void universalRaise(double v) {
+        double factor = 1 + (v/100);
+        for (int i=0; i<employeeList.size(); ++i) {
+            employeeList.get(i).setSalary(factor * employeeList.get(i).getSalary());
+        }
     }
 }
