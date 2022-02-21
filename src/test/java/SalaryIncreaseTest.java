@@ -75,6 +75,15 @@ public class SalaryIncreaseTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void checkIndividualRaiseAbove100Percent() {
+        double expected = 20000;
+        testSystem.employeeList.get(0).raiseSalary(101);
+        double actual = testSystem.employeeList.get(0).getSalary();
+
+        assertEquals(expected, actual);
+    }
+
 }
 
 
