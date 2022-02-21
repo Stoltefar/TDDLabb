@@ -49,6 +49,8 @@ public class Employee {
     }
 
     public void raiseSalary(double raisePercentage) {
-        this.salary = salary * (1 + (raisePercentage / 100));
+        if (raisePercentage >= 0) {
+            this.salary = salary * (1 + (raisePercentage / 100));
+        }
     }
 }
