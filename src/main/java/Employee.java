@@ -3,7 +3,7 @@ public class Employee {
     private String name;
     private int age;
     private int id;
-    private static int idCounter =0;
+    private static int idCounter = 0;
     private double salary;
 
 
@@ -48,7 +48,7 @@ public class Employee {
         return "Name: " + name + ", Age: " + age + ", Salary: " + salary + ", ID: " + id;
     }
 
-    public void raiseSalary(double v) {
-        this.salary = salary * (1+(v/100));
+    public void raiseSalary(double raisePercentage) {
+        this.salary = salary * (1 + (raisePercentage / 100));
     }
 }
