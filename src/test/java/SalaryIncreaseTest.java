@@ -40,4 +40,15 @@ public class SalaryIncreaseTest {
         assertEquals(expectedSalary, actual);
     }
 
+    @Test
+    public void checkNegativeRaisePercentage() {
+        double expected = 20000;
+        testSystem.universalRaise(-10);
+        double actual = testSystem.employeeList.get(0).getSalary();
+
+        assertEquals(expected, actual);
+    }
+
 }
+
+
