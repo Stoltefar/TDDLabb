@@ -19,9 +19,11 @@ public class EmployeeSystem {
     }
 
     public void universalRaise(double raisePercentage) {
-        double raiseFactor = 1 + (raisePercentage / 100);
-        for (int i = 0; i < employeeList.size(); ++i) {
-            employeeList.get(i).setSalary(raiseFactor * employeeList.get(i).getSalary());
+        if (raisePercentage >= 0) {
+            double raiseFactor = 1 + (raisePercentage / 100);
+            for (int i = 0; i < employeeList.size(); ++i) {
+                employeeList.get(i).setSalary(raiseFactor * employeeList.get(i).getSalary());
+            }
         }
     }
 }
