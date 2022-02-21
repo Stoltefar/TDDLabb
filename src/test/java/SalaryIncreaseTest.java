@@ -4,6 +4,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SalaryIncreaseTest {
     EmployeeSystem testSystem;
@@ -83,6 +84,22 @@ public class SalaryIncreaseTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void checkThatOnlyOneIsRaised() {
+        for (int i=0; i<testSystem.employeeList.size();++i) {
+            testSystem.employeeList.get(i).setSalary(10000);
+        }
+        boolean isNotChanged = true;
+        testSystem.employeeList.get(6).raiseSalary(5);
+        for (int i=0; i<testSystem.employeeList.size(); ++i) {
+            if (testSystem.employeeList.get(i).getSalary() != 10000) {
+                isNotChanged = false;
+            }
+        }
+        assertTrue(isNotChanged);
+    }
+
 
 }
 
