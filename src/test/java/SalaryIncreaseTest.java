@@ -32,8 +32,8 @@ public class SalaryIncreaseTest {
     @ParameterizedTest
     @CsvSource({
             "0, 20440.0",
-            "2, 21053,2",
-            "4, 21666,4",
+            "2, 21053.2",
+            "4, 21666.4",
             "10, 23506.0"
     })
     public void checkUniversalRaiseWithCsvValues(int employeeListIndex, double expectedSalary) {
