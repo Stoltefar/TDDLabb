@@ -17,5 +17,8 @@ public class SalaryIncreaseTest {
     @Test
     public void checkUniversalRaise() {
         testSystem.universalRaise(2.2);
+        double expected = 20440;
+        double actual = testSystem.employeeList.get(0).getSalary();
+        assertEquals(expected, actual);
     }
 }
